@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.logo > img {
+  width: 50px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.product {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 90%;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.product:hover {
+  border: 1px solid #bbbaaa;
+  box-shadow: 1px 1px 45px -10px grey;
+}
+
+.product p {
+  text-align: left;
+}
+
+.product-curry {
+  display: none;
+}
+
+.navbar {
+  color: white;
+  border: 1px solid #555;
+  background-color: #666;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.navbar .menu {
+  display: none;
+}
+
+.social {
+  padding-left: 50px;
+  padding-right: 50px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  header {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+  }
+
+  .product-curry {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  main {
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+@media (min-width: 1025px) {
+  header {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-right: 70px;
+    margin-right: auto;
+    width: 85%;
+  }
+
+  .product-curry {
+    display: block;
+  }
+
+  .product {
+    width: 30%;
+    height: 250px;
+    margin-bottom: 10px;
+  }
+
+  main {
+    flex-direction: row;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .social {
+    justify-content: space-around;
+  }
+
+  .navbar {
+    height: 45px;
+  }
+
+  .navbar .menu {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .navbar .hamburger {
+    display: none;
+  }
+
+  .help-button {
+    margin-left: 20px;
+    margin-right: -20px;
+  }
+
+  .menu li {
+    width: 25%;
+    text-align: center;
+    line-height: 45px;
+  }
+
+  .menu li:hover {
+    background-color: #444;
+  }
+}
